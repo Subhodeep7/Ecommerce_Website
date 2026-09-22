@@ -28,6 +28,14 @@ public class OrderDTO {
         this.orderItemDTOList = orderItemDTOList;
     }
 
+    public OrderDTO(Long orderId, double totalAmount, String status, Date orderDate, List<OrderItemDTO> orderItemDTOList) {
+        this.id = id;
+        this.totalAmount = totalAmount;
+        this.orderDate = orderDate;
+        this.status = status;
+        this.orderItemDTOList = orderItemDTOList;
+    }
+
     public Long getId() {
         return id;
     }

@@ -3,6 +3,7 @@ package com.project5.Ecommz.model;
 import java.util.Map;
 
 public class OrderRequest {
+    //KEY-> PRODUCT ID , VALUE -> PRODUCT QUANTITY
     private Map<Long,Integer> productQuantities;
 
     private double totalAmount;

@@ -16,15 +16,12 @@ public class UserController {
 
     @PostMapping("/register")
     public User registeruser(@RequestBody User user){
-        try{
-            System.out.println("User added to database");
-            return userService.registerUser(user);
+        return userService.registerUser(user);
+    }
 
-        }catch(Exception e){
-            e.printStackTrace();
-        }
-        return null;
-
+    @PostMapping("/login")
+    public User loginUser(@RequestBody User user){
+        return userService.loginUser(user.getEmail(),user.getPassword());
     }
 
 }
